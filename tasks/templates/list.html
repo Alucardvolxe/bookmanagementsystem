@@ -15,7 +15,7 @@
                 <th>Author</th>
                 <th>Published Date</th>
                 <th>ISBN</th>
-                <th>Description</th>
+                
                 <th>Actions</th>
             </tr>
         </thead>
@@ -25,8 +25,8 @@
                     <td>{{ book.title }}</td>
                     <td>{{ book.author }}</td>
                     <td>{{ book.published_date }}</td>
-                    <td>{{ book.isbn }}</td>
-                    <td>{{ book.description }}</td>
+                    <td>{{ book.isbn_number }}</td>
+                    
                     <td>
                         <a href="{% url 'book_update' book.id %}" class="btn btn-sm btn-warning">Edit</a>
                         <a href="{% url 'book_delete' book.id %}" class="btn btn-sm btn-danger">Delete</a>

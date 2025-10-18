@@ -22,14 +22,14 @@ def book_create(request):
 #Update a book
 def book_update(request,pk):
     book= get_object_or_404(Book,pk=pk)
-    if request.method=="Post":
+    if request.method=="POST":
         form=BookForm(request.POST, instance=book)
         if form.is_valid():
             form.save()
             return redirect("book_list")
     else:
         form = BookForm(instance=book)
-    return render(request, "update.html",{"form",form})
+    return render(request, "update.html",{"form":form})
 
 
 #Delete a book
